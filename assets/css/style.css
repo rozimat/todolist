@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+:root{
+  --primary-bg-c: #fff;
+  --primary-dark-c: #000;
+  --primary-box-sh: #64646f33 0px 0px 29px 0px;
+  --primary-border: 10px;
+  --primary-denger-c: #f43888;
+  --primary-success-c: #0aa50a;
+}
+body{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.todolist__container{
+  width: 500px;
+  min-height: 700px;
+  background-color: var(--primary-bg-c);
+  border-radius: var(--primary-border);
+  box-shadow: var(--primary-box-sh);
+  padding: 1rem;
+}
+.todolist__adder{
+  width: 100%;
+  height: 160px;
+  background-color: var(--primary-bg-c);
+  border-radius: var(--primary-border);
+  box-shadow: var(--primary-box-sh);
+  position: relative;
+}
+.adder__form{
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+}
+.input__wrapper{
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  flex: 1;
+  height: 50px;
+  background-color: var(--primary-bg-c);
+  border-radius: var(--primary-border);
+  box-shadow: var(--primary-box-sh);
+
+}
+.input__wrapper > input{
+  border: none;
+  outline: none;
+  height: 100%;
+  flex: 1;
+  font-size: 18px;
+  margin-right: 10px;
+  color: var(--primary-success-c);
+  caret-color: var(--primary-dark-c);
+}
+.adder__form > button{
+  background-color: var(--primary-success-c);
+  color: var(--primary-bg-c);
+  height: 50px;
+  padding: 0 1.25rem;
+  font-size: 18px;
+  border-radius: var(--primary-border);
+  border: none;
+  box-shadow: var(--primary-box-sh);
+  cursor: pointer;
+}
+.adder__form > button:hover{
+  background-color: #f43888;
+}
+.input__wrapper > i {
+  color: chartreuse;
+  cursor: pointer;
+
+}
+.todolistitem__container{
+  height: 480px;
+  width: 100%;
+  margin-top: 30px;
+  overflow-y: auto;
+}
+.todo__item{
+  width: 94%;
+  pad: 20px;
+  background-color: brown;
+  box-shadow: var(--primary-box-sh);
+  margin: 20px auto;
+  border-radius: var(--primary-border);
+  animation: bounce 0.5s;
+  word-break: break-all;
+}
+.todolist__controllers{
+  width: 100%;
+  padding: 0 1rem;
+  position: absolute;
+  bottom: 1rem;
+
+
+}
+.delete__all{
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: var(--primary-border);
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%{
+    transform: scale(0);
+  }
+  20%{
+    transform: scale(1);
+  }
+  40%{
+    transform: scale(0.8);
+  }
+  60%{
+    transform: scale(1);
+  }
+  80%{
+    transform: scale(0.9);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
